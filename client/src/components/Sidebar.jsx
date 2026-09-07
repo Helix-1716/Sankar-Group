@@ -3,7 +3,7 @@ import { NavLink, Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import Avatar from './Avatar';
 
-export default function Sidebar() {
+export default function Sidebar({ isOpen, onClose }) {
   const { profile, logout } = useAuth();
   const location = useLocation();
 
@@ -14,7 +14,7 @@ export default function Sidebar() {
   ];
 
   return (
-    <aside className="sidebar glass">
+    <aside className={`sidebar glass ${isOpen ? 'open' : ''}`}>
       <div className="sidebar-header">
         <div className="sidebar-logo">
           <div className="logo-icon">N</div>
@@ -33,6 +33,7 @@ export default function Sidebar() {
               key={item.path}
               to={item.path}
               end={item.path === '/'}
+              onClick={onClose}
               className={({ isActive }) =>
                 `nav-item ${isActive ? 'nav-item-active' : ''}`
               }

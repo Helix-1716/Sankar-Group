@@ -490,10 +490,63 @@ textarea {
 }
 
 /* ============================================
+   Mobile Header & Overlay
+   ============================================ */
+
+.mobile-header {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-secondary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  z-index: 90;
+}
+
+.hamburger-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  padding: var(--space-2);
+}
+
+.mobile-logo-text {
+  font-size: var(--font-size-lg);
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+}
+
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg-overlay);
+  z-index: 95;
+}
+
+/* ============================================
    Responsive
    ============================================ */
 
 @media (max-width: 1024px) {
+  .mobile-header {
+    display: flex;
+  }
+
+  .sidebar-overlay {
+    display: block;
+  }
+
   .main-content {
     margin-left: 0;
     padding: var(--space-4);
