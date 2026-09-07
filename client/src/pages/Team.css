@@ -1,0 +1,144 @@
+.team-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  background: var(--bg-card);
+  border: 1px solid var(--border-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3) var(--space-6);
+}
+
+.team-stat-value {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  color: var(--accent-light);
+}
+
+.team-stat-label {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Team Grid */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: var(--space-5);
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.team-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.team-card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.team-card-name {
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.team-card-email {
+  font-size: var(--font-size-sm);
+  color: var(--text-tertiary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+
+/* Stats */
+.team-card-stats {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-3) var(--space-4);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius-md);
+}
+
+.team-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.team-stat-number {
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.team-stat-text {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+}
+
+.team-stat-divider {
+  width: 1px;
+  height: 32px;
+  background: var(--border-secondary);
+}
+
+/* Projects */
+.team-card-projects {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.team-projects-label {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.team-projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.team-project-tag {
+  padding: var(--space-1) var(--space-3);
+  background: #000000;
+  border: 1px solid #000000;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.team-project-more {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--border-secondary);
+  color: var(--text-tertiary);
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
